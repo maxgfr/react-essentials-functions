@@ -1,28 +1,26 @@
 {
-  "name": "typescript-react-lib-swc",
-  "version": "1.0.1",
+  "name": "react-essentials-functions",
+  "version": "1.0.0",
   "author": "maxgfr",
   "license": "MIT",
-  "description": "A minimalist typescript swc starter for react",
+  "description": "A collection of zero-dependencies useful hooks and components for React",
   "main": "./build/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/maxgfr/typescript-react-lib-swc.git"
+    "url": "https://github.com/maxgfr/react-essentials-functions.git"
   },
   "bugs": {
-    "url": "https://github.com/maxgfr/typescript-react-lib-swc/issues"
+    "url": "https://github.com/maxgfr/react-essentials-functions/issues"
   },
-  "homepage": "https://github.com/maxgfr/typescript-react-lib-swc#readme",
+  "homepage": "https://github.com/maxgfr/react-essentials-functions#readme",
   "files": [
     "build"
   ],
   "keywords": [
-    "boilerplate",
-    "typescript",
-    "swc",
+    "hooks",
     "react",
-    "storybook",
-    "@testing-library"
+    "components",
+    "useful"
   ],
   "scripts": {
     "dev": "nodemon",
@@ -42,12 +40,13 @@
     "storybook:deploy:action": "npm run storybook:build && gh-pages -d storybook-static -u \"github-actions-bot <support+actions@github.com>\"",
     "release": "semantic-release"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
+    "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^8.0.6",
