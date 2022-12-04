@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/maxgfr/react-essentials-functions/compare/v1.0.0...v1.0.1) (2022-12-04)
+
+
+### Bug Fixes
+
+* build ([2042c09](https://github.com/maxgfr/react-essentials-functions/commit/2042c096020b3b171d1e2002610e4f1e1d838abf))
+
 # 1.0.0 (2022-12-04)
 
 
