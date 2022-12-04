@@ -10,4 +10,4 @@ yarn add react-essentials-functions
 
 ## Usage
 
-Documentation is in progress...
+Documentation is in progress... For now, you can check the source code of the components and hooks.
