@@ -26,7 +26,7 @@
   "scripts": {
     "dev": "nodemon",
     "develop": "node -r @swc-node/register ./src/index.ts",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "clean": "rimraf build",
     "build": "tsc -p tsconfig.build.json",
