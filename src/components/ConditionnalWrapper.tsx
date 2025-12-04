@@ -11,10 +11,3 @@ export const ConditionalWrapper = ({
   wrapper,
   children,
 }: ConditionnalWrapperProps) => (condition ? wrapper(children) : children);
-
-// <ConditionalWrapper
-//      condition={link}
-//      wrapper={children => <a href={link}>{children}</a>}
-//    >
-//     .....
-//    </ConditionalWrapper>
