@@ -6,6 +6,12 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -15,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
+      - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 10
@@ -24,13 +30,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
+          registry-url: https://registry.npmjs.org/
           cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm run build
+        run: pnpm build
 
       - name: Release
-        run: pnpm run release
+        run: pnpm release
