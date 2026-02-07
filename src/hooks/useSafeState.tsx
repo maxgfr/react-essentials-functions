@@ -1,8 +1,12 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
 
-export function useSafeState(initialValue = null) {
+type SetStateAction<T> = T | ((prevState: T) => T);
+
+export function useSafeState<T = unknown>(
+  initialValue: T | (() => T) = null as T,
+): [T, (value: SetStateAction<T>) => void] {
   const isMounted = useRef(true);
-  const [state, setState] = useState(initialValue);
+  const [state, setState] = useState<T>(initialValue);
 
   useEffect(() => {
     return () => {
@@ -10,7 +14,7 @@ export function useSafeState(initialValue = null) {
     };
   }, []);
 
-  const setStateSafe = useCallback((value: any) => {
+  const setStateSafe = useCallback((value: SetStateAction<T>) => {
     if (isMounted.current) {
       setState(value);
     }

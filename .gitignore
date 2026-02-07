@@ -32,3 +32,6 @@ build/
 
 # storybook
 storybook-static/
+
+# coverage
+coverage/
