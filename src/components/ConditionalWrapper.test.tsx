@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { ConditionalWrapper } from './ConditionnalWrapper';
+import { ConditionalWrapper } from './ConditionalWrapper';
 
 describe('ConditionalWrapper', () => {
   it('should wrap children when condition is true', () => {

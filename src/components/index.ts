@@ -1,1 +1,1 @@
-export * from './ConditionnalWrapper';
+export * from './ConditionalWrapper';

@@ -36,10 +36,10 @@ export type UseScriptOptions = {
  * if (status === 'error') return <div>Error loading script</div>;
  * ```
  */
-export const useScript = (
+export function useScript(
   url: string,
   options: UseScriptOptions = {},
-): UseScriptStatus => {
+): UseScriptStatus {
   const { onLoad, onError, removeOnUnmount = true } = options;
 
   const [status, setStatus] = useState<UseScriptStatus>('idle');
@@ -98,4 +98,4 @@ export const useScript = (
   }, [url, removeOnUnmount]);
 
   return status;
-};
+}

@@ -51,7 +51,7 @@ function getStoredTheme(): ThemeMode | null {
  * );
  * ```
  */
-export const useTheme = (): [ThemeMode, () => void, boolean] => {
+export function useTheme(): [ThemeMode, () => void, boolean] {
   const [theme, setTheme] = useState<ThemeMode>('light');
   const [mountedComponent, setMountedComponent] = useState(false);
 
@@ -84,4 +84,4 @@ export const useTheme = (): [ThemeMode, () => void, boolean] => {
   }, []);
 
   return [theme, themeToggler, mountedComponent];
-};
+}
